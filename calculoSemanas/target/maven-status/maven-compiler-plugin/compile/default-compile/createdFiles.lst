@@ -1,0 +1,10 @@
+com\porvenir\calculoSemanas\domain\dto\ResponseDto.class
+com\porvenir\calculoSemanas\web\ObjectController.class
+com\porvenir\calculoSemanas\domain\dto\CalculoSemanasDto.class
+com\porvenir\calculoSemanas\DemoApplication.class
+com\porvenir\calculoSemanas\domain\dto\StatusDto.class
+com\porvenir\calculoSemanas\domain\service\impl\ObjectServiceImpl.class
+com\porvenir\calculoSemanas\persistence\bean\GetDetallesSemanas.class
+com\porvenir\calculoSemanas\ServletInitializer.class
+com\porvenir\calculoSemanas\util\Constan.class
+com\porvenir\calculoSemanas\domain\dto\ResponseCalculoSemanasDto.class
