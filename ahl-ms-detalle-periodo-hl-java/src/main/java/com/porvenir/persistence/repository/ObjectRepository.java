@@ -1,6 +1,7 @@
 package com.porvenir.persistence.repository;
 
 import com.porvenir.domain.dto.PersonDto;
+import com.porvenir.persistence.entity.CtaCuentaAporteEntity;
 import com.porvenir.persistence.entity.PersonEntity;
 
 import org.springframework.stereotype.Repository;
@@ -11,14 +12,8 @@ import java.util.List;
 
 @Repository
 public interface ObjectRepository extends JpaRepository<Object, Integer> { // To change for model entity and dataType primary key
-    List<PersonEntity> findAll();
 
-    PersonEntity getById(Long id);
+    @Query(value = "SELECT * FROM MCUENTAS.CTA_CUENTA_APORTE A WHERE A.CUENTA_ID = (?1)", nativeQuery = true)
+    List<CtaCuentaAporteEntity> ctaCuentaAporte(Integer cuentaId);
 
-    PersonEntity save(PersonDto personDto) throws Exception;
-
-    void deleteById(Long id);
-
-    @Query("SELECT p FROM PersonEntity p WHERE p.nombre = :nombre")
-    PersonEntity getByName(@Param("nombre") String nombre);
 }

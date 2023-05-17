@@ -1,17 +1,13 @@
 package com.porvenir.domain.service;
 
 import com.porvenir.domain.dto.PersonDto;
+import com.porvenir.persistence.entity.CtaCuentaAporteEntity;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public interface ObjectService {
 
-    List<PersonDto> findAll();
+    List<CtaCuentaAporteEntity> functionCtaCuentaAporte(Integer cuentaId);
 
-    PersonDto getById(Long id);
-
-    PersonDto save(PersonDto personDto) throws Exception ;
-
-    void deleteById(Long id);
 }

@@ -3,6 +3,7 @@ package com.porvenir.web;
 import com.porvenir.domain.dto.PersonDto;
 import com.porvenir.domain.service.ObjectService;
 import com.porvenir.exception.ApiException;
+import com.porvenir.persistence.entity.CtaCuentaAporteEntity;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.Parameters;
@@ -66,9 +67,9 @@ public class ObjectController {
                     @Content(schema = @Schema(implementation = ApiException.class),mediaType = "application/json")
             },description = "Se presenta un error interno")
     })
-    @GetMapping(value = "/periodDetail")
-    public String periodDetail (@RequestParam Integer numeroCuenta) {
-        return "estoy respondiendo";
+    @GetMapping(value = "/periodDetailHl")
+    public List<CtaCuentaAporteEntity> periodDetail(@RequestParam Integer numeroCuenta) {
+        return objectService.functionCtaCuentaAporte(numeroCuenta);
     }
 
 
